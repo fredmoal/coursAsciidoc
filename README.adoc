@@ -1,0 +1,18 @@
+= cours d'Info : démo AsciiDoc
+
+== Slides et exemples du cours
+
+Les slides sont en asciidoc dans _docs/asciidoc_
+et les codes sources des démos dans _src/main/java_.
+
+== Usage
+
+Pour générer les slides et le pdf du cours, Maven, what else ?
+
+ $ mvn
+
+Pour voir les slides, ouvrir _target/generated-slides/slides.html_
+
+Pour le pdf, ouvrir _target/generated-docs/slides.pdf_
+
+Pour le code des exemples, ils sont dans _src/main/java_, tout simplement !

@@ -1,0 +1,135 @@
+= Exemple de cours en AsciiDoc
+Frédéric Moal <frederic.moal@univ-orleans.fr>
+v1.0, 2017-10-26: une première version
+:example-caption!:
+ifndef::imagesdir[:imagesdir: images]
+ifndef::sourcedir[:sourcedir: ../../main/java]
+
+
+== Pendant la présentation des slides...
+
+* Press the `*s*` key to access speaker notes.
+* You can press `*b*` or `*.*` to blank/unblank your current screen.
+* Press the `*esc*` key to get an overview of your slides.
+* Press the down arrow key to see the next sub-slide (if exist !).
+
+[NOTE.speaker]
+--
+Mes notes de slides sont visibles dans la fenêtre speaker, mais aussi dans le poly pdf
+--
+
+
+== Une première partie simple
+
+Par l'ouverture d'une sous-section avec ==
+
+Voir la doc de AsciiDoc en ligne pour la syntaxe :
+
+http://asciidoctor.org/docs/user-manual/
+
+
+== Un plan avec affichage progressif
+
+Option [%step]
+sur le contenu, uniquement sur les slides, pas le pdf
+
+[%step]
+* La généricité ? C'est quoi ?
+* Comment on l'utilise ?
+* Comment on la défini ?
+
+
+== Des sous-parties
+
+pour les slides, Appuyez sur flèche bas pour les parcourir
+
+=== sous-partie 1
+Contenu sous-partie 1
+
+=== sous-partie 2
+Contenu sous-partie 2
+
+
+
+== Include des sous-parties
+
+Avec une option include
+
+.include::section/chapitre1.adoc[]
+
+...
+
+
+include::section/chapitre1.adoc[]
+
+include::section/chapitre2.adoc[]
+
+
+=== Du code Java
+
+Un code à éviter
+
+[source,java]
+----
+    public class Code extends Thread {
+     public void run() {
+       System.out.println("Hello Thread");
+     }
+    }
+----
+
+
+=== Mieux : du code Java exécutable dans le projet !
+
+Un include de code dans le code source Java du projet
+
+Ici les commentaires // tag::contains[] dans le code définissent
+la sous-partie du code source à inclure dans le document
+
+[source,java]
+----
+include::{sourcedir}/base/Methode.java[tags=contains,indent=0]
+----
+
+
+== un diagramme PlantUML
+
+Définition d'un diagramme en mode texte et affichage graphique
+
+[plantuml,auth-protocol]
+....
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: another authentication Response
+....
+
+
+== Attributs
+
+Flèche bas pour visualiser les éléments
+
+=== Attributs 1
+.Built-in
+asciidoctor-version:: {asciidoctor-version}
+safe-mode-name:: {safe-mode-name}
+docdir:: {docdir}
+docfile:: {docfile}
+imagesdir:: {imagesdir}
+
+=== Attributs 2
+.Custom
+project-version:: {project-version}
+sourcedir:: {sourcedir}
+
+
+
+== This is the end !
+
+Avec une image :
+
+[.thumb]
+image::end.jpg[scaledwidth=75%]
+
+

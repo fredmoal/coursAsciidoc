@@ -1,0 +1,12 @@
+== chapitre 2
+
+=== slide 1
+
+Contenu de _src/docs/asciidoc/section/chapitre2.adoc_.
+
+sous-partie 2.1
+
+
+=== slide 2
+
+sous-partie 2.2...
