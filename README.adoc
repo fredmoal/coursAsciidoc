@@ -32,4 +32,4 @@ Pour le pdf, ouvrir _target/generated-docs/cours.pdf_
 
 Pour le code des exemples, ils sont dans _src/main/java_, tout simplement !
 
-Merci à
+Merci à @abelsromero pour les exemples sur https://github.com/asciidoctor/asciidoctor-maven-examples
