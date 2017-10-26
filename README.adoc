@@ -1,8 +1,23 @@
-= cours d'Info : démo AsciiDoc
+= démo : comment utiliser AsciiDoc pour mes cours
+
+Enseignant l'informatique à l'université, j'ai toujours eu les mêmes interrogations  :
+
+* comment faire des slides simplement,
+* comment gérer les versions de mes slides au long des années,
+* comment intégrer dans mes slides mes live démos en cours sans faire de copier/coller moches
+* comment éviter aux étudiants de décimer la forêt avant mes examens en imprimant mes slides,
+
+Bon, je crois avoir trouver la solution : AsciiDoc
+
+Comme dirait @Agoncal, comme je suis Maven addict, il fallait quand même automatiser un minimum le truc.
+Voilà une proposition de solution pour commencer.
+
+Merci pour vos suggestions !
+
 
 == Slides et exemples du cours
 
-Les slides sont en asciidoc dans _docs/asciidoc_
+Les documents du cours sont en asciidoc dans _docs/asciidoc_
 et les codes sources des démos dans _src/main/java_.
 
 == Usage
@@ -11,8 +26,10 @@ Pour générer les slides et le pdf du cours, Maven, what else ?
 
  $ mvn
 
-Pour voir les slides, ouvrir _target/generated-slides/slides.html_
+Pour voir les slides, ouvrir _target/generated-slides/cours.html_
 
-Pour le pdf, ouvrir _target/generated-docs/slides.pdf_
+Pour le pdf, ouvrir _target/generated-docs/cours.pdf_
 
 Pour le code des exemples, ils sont dans _src/main/java_, tout simplement !
+
+Merci à
